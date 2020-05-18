@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <script src="./js/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <!--원하는 logo를 넣기위해 script 추가-->
+    <script defer src="./js/main.js"></script> <!-- defer: html전체가 다 로딩이 끝나면 main.js를 실행하겠다.-->
+    <script>
+        $(function () {
+            $(".slider").slick({
+                slide: 'div',
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                infinite: true,
+                arrows: true,
+                slideToShow: 1,
+                slidesToScroll: 1,
+
+                responsive: [{
+                        breakpoint: 1220,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+        $(function () {
+            $(".slider-gallery").slick({
+                dots: true,
+                autoplay: false,
+                autoplaySpeed: 3000,
+                infinite: true,
+                arrows: true,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                prevArrow: '<i class="fas fa-angle-left"></i>',
+                nextArrow: '<i class="fas fa-angle-right"></i>',
+                responsive: [
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 3,
+                            autoplaySpeed: 3000,
+                            autoplay:true,
+                            arrows:false
+                        }
+                    }
+                    ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!--header-->
+    <header>
+        <div class="header_logo">
+            <img src="./img/pengsu-logo.PNG" alt="">
+            <a href="">PengSu</a>
+        </div>
+        <ul class="header_menu">
+            <li><a href="#content--main"><i class="fas fa-home"></i>&nbsp;HOME</a></li>
+            <li><a href="#content--shopping"><i class="fas fa-shopping-cart"></i>&nbsp;SHOPPING</a></li>
+            <li><a href="#content--video"><i class="fas fa-film"></i>&nbsp;VIDEO</a></li>
+            <li><a href="#content--gallery"><i class="far fa-images"></i>&nbsp;Gallery</a></li>
+        </ul>
+        <ul class="header_icons">
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+        </ul>
+        <a href="#" class="header_toggleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </header>
+    <!--content-->
+    <div class="content">
+        <section id="content--main"></section>
+        <section id="content--shopping">
+            <div class="shopping">
+                <div class="slider beg">
+                    <div><img src="./img/pengsu-beg1.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-beg4.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-beg2.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-beg3.PNG" alt=""></div>
+                </div>
+                <p>
+                    펭수 쇼핑백
+                    5,000원
+                </p>
+            </div>
+            <div class="shopping">
+                <div class="slider pouch">
+                    <div><img src="./img/pengsu-pouch1.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-pouch2.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-pouch3.PNG" alt=""></div>
+                </div>
+                <p>
+                    펭수 8인치 멀티 파우치
+                    25,200원
+                </p>
+            </div>
+            <div class="shopping">
+                <div class="slider planner">
+                    <div><img src="./img/pengsu-note1.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-note2.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-note3.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-note4.PNG" alt=""></div>
+                </div>
+                <p>
+                    펭수 스터디 플래너(4종)
+                    8,800원
+                </p>
+            </div>
+            <div class="shopping">
+                <div class="slider notepaper">
+                    <div><img src="./img/pengsu-notepaper1.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-notepaper2.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-notepaper3.PNG" alt=""></div>
+                    <div><img src="./img/pengsu-notepaper4.PNG" alt=""></div>
+                </div>
+                <p>
+                    펭수 접착 메모지(4종)
+                    4,000원
+                </p>
+            </div>
+        </section>
+        <section id="content--video">
+            <div class="video">
+                <span>펭수 팬사인회 동영상</span>
+                <div class="video-ratio">
+                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/CXkuXIdaI1U" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="content--gallery">
+            <div class="slider-gallery">
+                <img src="./img/pengsu-gallery1.jpg" alt="">
+                <img src="./img/pengsu-gallery2.jpg" alt="">
+                <img src="./img/pengsu-gallery3.jpg" alt="">
+                <img src="./img/pengsu-gallery4.jpg" alt="">
+                <img src="./img/pengsu-gallery5.jpeg" alt="">
+                <img src="./img/pengsu-gallery6.jpg" alt="">
+                <img src="./img/pengsu-gallery7.jpg" alt="">
+                <img src="./img/pengsu-gallery8.jpg" alt="">
+                <img src="./img/pengsu-gallery9.jpg" alt="">
+            </div>
+        </section>
+        <div>
+            <footer>
+                <p>Copyright ⓒ 2020 PengSu All right reserved.</p>
+            </footer>
+</body>
+
+</html>

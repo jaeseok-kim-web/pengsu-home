@@ -15,8 +15,9 @@
     <!--원하는 logo를 넣기위해 script 추가-->
     <script defer src="./js/main.js"></script> <!-- defer: html전체가 다 로딩이 끝나면 main.js를 실행하겠다.-->
     <script>
-        $(function () {
-            $(".slider").slick({
+        J=jQuery;
+        J(function () {
+            J(".slider").slick({
                 slide: 'div',
                 dots: false,
                 autoplay: true,
@@ -41,8 +42,8 @@
                 ]
             });
         });
-        $(function () {
-            $(".slider-gallery").slick({
+        J(function () {
+            J(".slider-gallery").slick({
                 dots: true,
                 autoplay: false,
                 autoplaySpeed: 3000,
